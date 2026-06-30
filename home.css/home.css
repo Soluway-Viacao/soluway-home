@@ -1212,3 +1212,35 @@ iframe {
     justify-content: center;
   }
 }
+
+.produto-em-breve {
+  cursor: pointer;
+}
+
+.produto-em-breve .mensagem-produto {
+  display: none;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: #f3ecff;
+  color: #7c3aed;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.produto-em-breve.mostrar-aviso .mensagem-produto {
+  display: block;
+}
+
+.produto-bloqueado {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #7c3aed;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
