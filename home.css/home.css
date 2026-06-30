@@ -16,6 +16,7 @@
   --green: #1dbf73;
   --purple: #7c3aed;
   --orange: #f59e0b;
+  --header-offset: 86px;
 }
 
 html,
@@ -23,12 +24,14 @@ body {
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset, 86px);
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background: #ffffff;
+  padding-top: var(--header-offset, 86px);
 }
 
 a {
@@ -47,6 +50,11 @@ iframe {
 ========================= */
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   min-height: 86px;
   background: linear-gradient(90deg, #00132f, #001d46);
   color: var(--white);
@@ -927,11 +935,15 @@ iframe {
 }
 
 @media (max-width: 950px) {
+  :root {
+    --header-offset: 180px;
+  }
+
   .header {
     height: auto;
-    padding: 24px;
+    padding: 18px 24px;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
     text-align: center;
   }
 
@@ -1025,8 +1037,12 @@ iframe {
 }
 
 @media (max-width: 600px) {
+  :root {
+    --header-offset: 170px;
+  }
+
   .header {
-    padding: 22px 18px;
+    padding: 16px 18px;
   }
 
   .brand h1 {
@@ -1041,7 +1057,7 @@ iframe {
   .header-button {
     width: 100%;
     max-width: 260px;
-    padding: 13px 20px;
+    padding: 12px 20px;
     text-align: center;
   }
 
