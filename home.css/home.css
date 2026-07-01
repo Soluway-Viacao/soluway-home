@@ -499,7 +499,7 @@ iframe {
 
 .small-title {
   color: var(--gold);
-  font-size: 13px;
+  font-size: 30px;
   font-weight: 900;
   display: flex;
   justify-content: center;
