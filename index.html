@@ -196,7 +196,7 @@
             </p>
 
             <a
-              href="https://soluway.vercel.app/"
+              href="https://soluway-rodoviaria.vercel.app/"
               target="_blank"
               rel="noopener"
             >
@@ -220,7 +220,7 @@
               atendimento ao passageiro diretamente pelo WhatsApp.
             </p>
 
-            <a href="passagens.html">
+            <a href="https://soluway.vercel.app/">
               Conhecer solução
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -228,28 +228,29 @@
         </article>
 
         <article class="solution-card produto-em-breve" id="eu-rh-card">
-  <div class="icon purple">
-    <i class="fa-solid fa-users"></i>
-  </div>
+          <div class="icon purple">
+            <i class="fa-solid fa-users"></i>
+          </div>
 
-  <div>
-    <h3>EU RH</h3>
-    <h4>Gestão de vagas e candidatos</h4>
+          <div>
+            <h3>EU RH</h3>
+            <h4>Gestão de vagas e candidatos</h4>
 
-    <p>
-      Plataforma completa para recrutamento e seleção. Publique vagas,
-      receba candidaturas e gerencie todo o processo seletivo.
-    </p>
+            <p>
+              Plataforma completa para recrutamento e seleção. Publique vagas,
+              receba candidaturas e gerencie todo o processo seletivo.
+            </p>
 
-    <div class="mensagem-produto">
-      Produto em atualização. Estamos realizando melhorias antes do lançamento.
-    </div>
+            <div class="mensagem-produto">
+              Produto em atualização. Estamos realizando melhorias antes do
+              lançamento.
+            </div>
 
-    <button type="button" class="produto-link produto-bloqueado">
-      Conhecer solução →
-    </button>
-  </div>
-</article>
+            <button type="button" class="produto-link produto-bloqueado">
+              Conhecer solução →
+            </button>
+          </div>
+        </article>
 
         <article class="solution-card">
           <div class="icon green">
@@ -508,33 +509,35 @@
     </footer>
     <!-- <script src="script.js"></script> -->
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const cardEuRh = document.querySelector("#eu-rh-card");
-    const mensagemEuRh = document.querySelector("#eu-rh-card .mensagem-produto");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cardEuRh = document.querySelector("#eu-rh-card");
+        const mensagemEuRh = document.querySelector(
+          "#eu-rh-card .mensagem-produto",
+        );
 
-    let timerMensagem = null;
+        let timerMensagem = null;
 
-    if (cardEuRh && mensagemEuRh) {
-      mensagemEuRh.style.display = "none";
-
-      cardEuRh.addEventListener("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-
-        mensagemEuRh.style.display = "block";
-
-        if (timerMensagem) {
-          clearTimeout(timerMensagem);
-        }
-
-        timerMensagem = setTimeout(function () {
+        if (cardEuRh && mensagemEuRh) {
           mensagemEuRh.style.display = "none";
-          cardEuRh.classList.remove("mostrar-aviso");
-        }, 10000);
+
+          cardEuRh.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            mensagemEuRh.style.display = "block";
+
+            if (timerMensagem) {
+              clearTimeout(timerMensagem);
+            }
+
+            timerMensagem = setTimeout(function () {
+              mensagemEuRh.style.display = "none";
+              cardEuRh.classList.remove("mostrar-aviso");
+            }, 10000);
+          });
+        }
       });
-    }
-  });
-</script>
+    </script>
   </body>
 </html>
