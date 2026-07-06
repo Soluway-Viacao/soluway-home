@@ -1258,3 +1258,17 @@ iframe {
   color: #ffffff;
   text-decoration: underline;
 }
+.footer-bottom {
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+}
