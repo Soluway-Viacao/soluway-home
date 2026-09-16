@@ -1,7 +1,7 @@
 function abrirWhatsApp(
   message = "Olá! Gostaria de falar com um especialista da SOLUWAY.",
 ) {
-  const phone = "555194704936";
+  const phone = "555191456354";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   window.open(url, "_blank", "noopener");
